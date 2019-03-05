@@ -1,0 +1,7 @@
+@import "~@newamerica/data-table/dist/styles.css";
+@import "~@newamerica/charts/dist/styles.css";
+@import "~@newamerica/meta/dist/styles.css";
+.ReactTable .rt-td {
+  display: flex;
+  align-items: center;
+}
