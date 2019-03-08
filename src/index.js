@@ -1,6 +1,7 @@
-import { DataTableWithSearch } from "@newamerica/data-table";
+import { DataTable } from "@newamerica/data-table";
 import { ChartContainer, Title, Source } from "@newamerica/meta";
 import { Empty, Half, Full } from "./lib/icons";
+import StackedBar from "./StackedBar";
 import "./index.scss";
 
 let queue = [];
@@ -39,11 +40,39 @@ const settings = {
     ];
     ReactDOM.render(
       <ChartContainer full>
-        <Title>This is a title</Title>
-        <DataTableWithSearch columns={columns} data={_data} />
+        <Title>State by State Comparison</Title>
+        <div className="dv-key">
+          <div className="dv-key__item">
+            <Empty />
+            <span>Does not address</span>
+          </div>
+          <div className="dv-key__item">
+            <Half />
+            <span>
+              Addresses competency, but does not differentiates standards by
+              teacher career level or performance level
+            </span>
+          </div>
+          <div className="dv-key__item">
+            <Full />
+            <span>
+              Addresses competency and differentiates standards by teacher
+              career level or performance level
+            </span>
+          </div>
+        </div>
+        <DataTable columns={columns} data={_data} />
+        <Source>
+          Source: Author’s analysis, based on standard documents reviewed. See
+          Appendix A for the Methodology and Appendix B for the full list of
+          standards documents reviewed.
+        </Source>
       </ChartContainer>,
       el
     );
+  },
+  column_chart: el => {
+    ReactDOM.render(<StackedBar data={data.chart} />, el);
   }
 };
 

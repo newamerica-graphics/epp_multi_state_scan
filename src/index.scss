@@ -5,3 +5,21 @@
   display: flex;
   align-items: center;
 }
+
+.dv-key {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 32rem;
+  border: 1px solid #d4d4d4;
+  background-color: #fff;
+}
+
+.dv-key__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  svg {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+}
