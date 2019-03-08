@@ -37,7 +37,10 @@ function StackedBar({ data }) {
                 padding: "0.25rem"
               }}
             >
-              <span>{datum.bar.data[getTooltipDatum(datum.key)]}</span>
+              <span>
+                <b>States:</b> {datum.bar.data[getTooltipDatum(datum.key)]}{" "}
+                <b>({datum.bar.data[datum.key]})</b>
+              </span>
             </div>
           );
         }}
