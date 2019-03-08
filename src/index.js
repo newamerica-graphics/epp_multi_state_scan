@@ -32,7 +32,7 @@ const settings = {
         .map(d => ({
           Header: d,
           accessor: d,
-          minWidth: d === "Cultural/Linguistic Communication " ? 200 : 150,
+          minWidth: 210,
           Cell: ({ value }) => {
             return iconRenderer(value);
           }
