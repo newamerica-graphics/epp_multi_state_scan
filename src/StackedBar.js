@@ -3,6 +3,8 @@ import { Chart } from "@newamerica/charts";
 import VerticalStackedBar from "./charts/VerticalStackedBar";
 import { ChartContainer, Title, Source } from "@newamerica/meta";
 import { colors } from "./lib/colors";
+import { LegendOrdinal } from "@vx/legend";
+import { scaleOrdinal } from "@vx/scale";
 
 const getTooltipDatum = competency => {
   switch (competency) {
@@ -21,9 +23,19 @@ function StackedBar({ data }) {
     "Addresses competency, but does not differentiates standards by teacher career level or performance level",
     "Addresses competency and differentiates standards by teacher career level or performance level"
   ];
+  const chartColors = [
+    colors.turquoise.light,
+    colors.blue.light,
+    colors.purple.light
+  ];
+  const scale = scaleOrdinal({
+    domain: keys,
+    range: chartColors
+  });
   return (
     <ChartContainer style={{ maxWidth: 800, margin: "auto" }}>
       <Title>Which Competencies Do Standards Address?</Title>
+      <LegendOrdinal scale={scale} />
       <Chart
         maxWidth={800}
         height={500}
@@ -49,11 +61,7 @@ function StackedBar({ data }) {
           <VerticalStackedBar
             x={d => d["Competency "]}
             keys={keys}
-            colors={[
-              colors.turquoise.light,
-              colors.blue.light,
-              colors.purple.light
-            ]}
+            colors={chartColors}
             margin={{ top: 0, left: 25, right: 40, bottom: 65 }}
             data={data}
             numTicksY={5}
