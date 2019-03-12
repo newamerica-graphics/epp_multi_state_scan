@@ -24,9 +24,9 @@ function StackedBar({ data }) {
     "Addresses competency and differentiates standards by teacher career level or performance level"
   ];
   const chartColors = [
-    colors.turquoise.light,
+    colors.red.light,
     colors.blue.light,
-    colors.purple.light
+    colors.turquoise.light
   ];
   const scale = scaleOrdinal({
     domain: keys,

@@ -1,9 +1,35 @@
 @import "~@newamerica/data-table/dist/styles.css";
 @import "~@newamerica/charts/dist/styles.css";
 @import "~@newamerica/meta/dist/styles.css";
-.ReactTable .rt-td {
-  display: flex;
-  align-items: center;
+@import "~@newamerica/scss/breakpoints";
+.ReactTable {
+  .rt-td {
+    display: flex;
+    align-items: center;
+  }
+  .rt-td:first-child {
+    @include breakpoint(medium) {
+      position: sticky !important;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: white;
+    }
+  }
+  .rt-tr.-odd .rt-td:first-child {
+    @include breakpoint(medium) {
+      background-color: #f5f5f5;
+    }
+  }
+  .rt-th:first-child {
+    @include breakpoint(medium) {
+      position: sticky !important;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: white;
+    }
+  }
 }
 
 .dv-key {

@@ -1,4 +1,5 @@
 import React from "react";
+import { colors } from "./colors";
 
 const Empty = () => (
   <svg
@@ -10,7 +11,7 @@ const Empty = () => (
       cx="25"
       cy="25"
       r="24"
-      stroke="#333"
+      stroke="#2ebcb3"
       strokeWidth="2"
       fill="none"
       fillRule="evenodd"
@@ -32,9 +33,9 @@ const Half = () => (
       <mask id="b" fill="#fff">
         <use xlinkHref="#a" />
       </mask>
-      <use fill="#333" xlinkHref="#a" />
+      <use fill="#2ebcb3" xlinkHref="#a" />
       <path fill="#FFF" mask="url(#b)" d="M-1-1h25v50H-1z" />
-      <circle stroke="#333" strokeWidth="2" cx="24" cy="24" r="24" />
+      <circle stroke="#2ebcb3" strokeWidth="2" cx="24" cy="24" r="24" />
     </g>
   </svg>
 );
@@ -45,7 +46,7 @@ const Full = () => (
     xmlns="http://www.w3.org/2000/svg"
     style={{ width: "1rem", height: "auto" }}
   >
-    <circle cx="25" cy="25" r="25" fill="#333" fillRule="evenodd" />
+    <circle cx="25" cy="25" r="25" fill="#2ebcb3" fillRule="evenodd" />
   </svg>
 );
 
