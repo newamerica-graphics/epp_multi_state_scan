@@ -40,7 +40,10 @@ const settings = {
     ];
     ReactDOM.render(
       <ChartContainer full>
-        <Title>State by State Comparison</Title>
+        <Title>
+          Figure 3 | State by State Comparison: What Culturally Responsive
+          Competencies Does Your State’s Teaching Standards Address?
+        </Title>
         <div className="dv-key">
           <div className="dv-key__item">
             <Empty />
@@ -62,11 +65,7 @@ const settings = {
           </div>
         </div>
         <DataTable columns={columns} data={_data} />
-        <Source>
-          Source: Author’s analysis, based on standard documents reviewed. See
-          Appendix A for the Methodology and Appendix B for the full list of
-          standards documents reviewed.
-        </Source>
+        <Source>Source: New America's analysis</Source>
       </ChartContainer>,
       el
     );

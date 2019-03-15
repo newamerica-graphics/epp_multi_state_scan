@@ -24,9 +24,9 @@ function StackedBar({ data }) {
     "Addresses competency and differentiates standards by teacher career level or performance level"
   ];
   const chartColors = [
-    colors.red.light,
-    colors.blue.light,
-    colors.turquoise.light
+    colors.grey.medium,
+    colors.turquoise.light,
+    colors.turquoise.dark
   ];
   const scale = scaleOrdinal({
     domain: keys,
@@ -34,7 +34,10 @@ function StackedBar({ data }) {
   });
   return (
     <ChartContainer style={{ maxWidth: 800, margin: "auto" }}>
-      <Title>Which Competencies Do Standards Address?</Title>
+      <Title>
+        Figure 2 | What Culturally Responsive Competencies do State Teaching
+        Standards Address?
+      </Title>
       <LegendOrdinal scale={scale} />
       <Chart
         maxWidth={800}
@@ -70,8 +73,7 @@ function StackedBar({ data }) {
         )}
       </Chart>
       <Source>
-        Source: Author’s analysis, based on standard documents reviewed; see
-        Appendix A for Methodology. <br />
+        Source: New America's analysis <br />
         <br />
         Note: Washington and Alaska each had two standards documents that were
         reviewed for this chart; see Appendix B for the full list of standards
