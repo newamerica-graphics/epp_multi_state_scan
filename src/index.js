@@ -65,7 +65,12 @@ const settings = {
           </div>
         </div>
         <DataTable columns={columns} data={_data} />
-        <Source>Source: New America's analysis</Source>
+        <Source>
+          {" "}
+          Source: New America’s analysis based on standard documents reviewed.
+          See Appendix A for the Methodology and Appendix B for the full list of
+          standards documents reviewed.
+        </Source>
       </ChartContainer>,
       el
     );

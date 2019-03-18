@@ -73,7 +73,10 @@ function StackedBar({ data }) {
         )}
       </Chart>
       <Source>
-        Source: New America's analysis <br />
+        Source: New America’s analysis based on standard documents reviewed. See
+        Appendix A for the Methodology and Appendix B for the full list of
+        standards documents reviewed.
+        <br />
         <br />
         Note: Washington and Alaska each had two standards documents that were
         reviewed for this chart; see Appendix B for the full list of standards
